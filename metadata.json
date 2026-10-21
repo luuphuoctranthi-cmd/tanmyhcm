@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Trợ lý số thông minh phường Tân Mỹ",
+  "description": "Hệ thống hướng dẫn thủ tục hành chính công bằng giọng nói, phát loa tự động",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Radar pulse animation for the active voice microphone */
+@keyframes mic-pulse-red {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 26px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-mic-red {
+  animation: mic-pulse-red 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes mic-wave {
+  0%, 100% {
+    height: 12px;
+  }
+  50% {
+    height: 38px;
+  }
+}
+
+/* Blinking effect for the Action Link to online portal */
+@keyframes action-blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.4), 0 8px 10px -6px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(1.02);
+    box-shadow: 0 20px 35px -5px rgba(34, 197, 94, 0.7), 0 10px 10px -5px rgba(34, 197, 94, 0.4);
+  }
+}
+
+@keyframes glow-badge {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-mic-active {
+  animation: mic-pulse 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-action-blink {
+  animation: action-blink 1.8s infinite ease-in-out;
+}
+
+.animate-glow {
+  animation: glow-badge 2s infinite ease-in-out;
+}
+
+/* Font size adjustments for elderly accessibility */
+.font-size-normal {
+  font-size: 1rem;
+}
+.font-size-large {
+  font-size: 1.15rem;
+}
+.font-size-large h1 {
+  font-size: 2.15rem;
+}
+.font-size-large h2 {
+  font-size: 1.75rem;
+}
+.font-size-large h3 {
+  font-size: 1.45rem;
+}
+.font-size-large p, .font-size-large li, .font-size-large span {
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.font-size-huge {
+  font-size: 1.3rem;
+}
+.font-size-huge h1 {
+  font-size: 2.5rem;
+}
+.font-size-huge h2 {
+  font-size: 2rem;
+}
+.font-size-huge h3 {
+  font-size: 1.65rem;
+}
+.font-size-huge p, .font-size-huge li, .font-size-huge span {
+  font-size: 1.3rem;
+  line-height: 1.85;
+}
